@@ -1,4 +1,9 @@
 import { createApp } from "vue";
-import Welcome from "../js/components/Welcome.vue";
-const app = createApp(Welcome);
+import { createPinia } from "pinia";
+import App from "../js/components/Welcome.vue";
+
+const pinia = createPinia();
+const app = createApp(App);
+
+app.use(pinia);
 app.mount("#app");
